@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MC Trailhead</title>
+  <meta name="description" content="MC Trailhead is a free, private Minecraft: Java Edition launcher for a small community of self-hosted servers.">
+  <style>
+    :root {
+      --bg: #f7f6f2; --fg: #1d1f1c; --muted: #5b6058; --card: #ffffff;
+      --border: #dcdad2; --accent: #3f7a3a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161815; --fg: #e9eae5; --muted: #a4a99f; --card: #1f221e;
+        --border: #33372f; --accent: #7fbf6f;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+    header h1 { margin: 0; font-size: 2rem; letter-spacing: -0.01em; }
+    header p { margin: 4px 0 0; color: var(--muted); }
+    section {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 20px 24px; margin-top: 24px;
+    }
+    h2 { margin: 0 0 8px; font-size: 1.15rem; }
+    ul { padding-left: 20px; margin: 8px 0 0; }
+    li + li { margin-top: 4px; }
+    a { color: var(--accent); }
+    footer { margin-top: 32px; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>MC Trailhead</h1>
+    <p>The starting point for playing on our servers.</p>
+  </header>
+
+  <section>
+    <h2>What it is</h2>
+    <p>
+      MC Trailhead is a free, non-commercial desktop launcher for <strong>Minecraft: Java Edition</strong>,
+      used by a small private community of invited players on our self-hosted servers.
+      A player picks one of the servers we offer, and Trailhead installs the right Minecraft version,
+      mod loader, Java runtime and modpack into its own folder, keeps the modpack in sync with the
+      server, and launches the game straight into that server.
+    </p>
+    <p>
+      It is the companion to MC Server Manager, the tool we use to run the servers. Trailhead only
+      connects to servers its users have been invited to. It is not sold, and has no ads or purchases.
+    </p>
+  </section>
+
+  <section>
+    <h2>Signing in</h2>
+    <ul>
+      <li>Players sign in with their own Microsoft account in their web browser
+        (OAuth 2.0 with PKCE). Trailhead never sees their password.</li>
+      <li>Trailhead uses the sign-in to get a Minecraft access token, checks that the account owns
+        Java Edition, reads the player's profile (name and UUID), and starts the official game.</li>
+      <li>A genuine account that owns Java Edition is required. There is no offline or cracked mode.</li>
+      <li>The game itself is downloaded only from Mojang's official servers and is not modified.</li>
+    </ul>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy</h2>
+    <ul>
+      <li>Sign-in tokens stay on the player's computer, encrypted with the operating system's
+        credential protection (DPAPI on Windows).</li>
+      <li>Tokens are only sent to Microsoft, Xbox and Minecraft services. They are never sent to our
+        servers or anyone else.</li>
+      <li>Trailhead does not collect analytics, track usage, or sell or share any data.</li>
+      <li>Our servers only see what any Minecraft server sees when a player joins (their name and UUID),
+        plus which modpack files they download.</li>
+      <li>Signing out in Trailhead deletes the stored tokens. Access can also be removed at any time
+        from <a href="https://account.microsoft.com/privacy/app-access">your Microsoft account</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Questions or concerns: open an issue at
+      <a href="https://github.com/RileyFW/mctrailhead/issues">github.com/RileyFW/mctrailhead/issues</a>.
+    </p>
+  </section>
+
+  <footer>
+    MC Trailhead is not an official Minecraft product and is not approved by or associated with Mojang or Microsoft.
+  </footer>
+</main>
+</body>
+</html>
